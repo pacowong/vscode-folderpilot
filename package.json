@@ -2,7 +2,7 @@
   "name": "xolverse-folderpilot",
   "displayName": "FolderPilot",
   "description": "Run Copilot-powered folder skills",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "xolverse",
   "license": "MIT",
     "repository": {
