@@ -5,6 +5,10 @@
   "version": "0.0.1",
   "publisher": "xolverse",
   "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/pacowong/vscode-folderpilot"
+    },
   "engines": {
     "vscode": "^1.107.0",
     "node": "22.x"

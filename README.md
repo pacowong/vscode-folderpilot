@@ -2,9 +2,6 @@
 
 FolderPilot is a VS Code extension that runs Copilot-powered skills against a folder. Skills live in workspace-level `.agent/interactive_skills/<skill>/SKILL.md` files and are enabled per folder with `.agent/interactive_skills.yaml`. Outputs are written into the folder's `tmp/` directory and opened in VS Code.
 
-![temp](https://github.com/user-attachments/assets/4288d4a2-3c14-4783-9205-bed3824c226b)
-
-
 ## Features
 
 - Explorer view to discover skill-enabled folders.
@@ -28,8 +25,7 @@ FolderPilot is a VS Code extension that runs Copilot-powered skills against a fo
 
 ### Example: Stakeholder Update
 
-![FolderPilot Stakeholder Update Demo](https://github.com/user-attachments/assets/4288d4a2-3c14-4783-9205-bed3824c226b)
-
+![FolderPilot Stakeholder Update Demo](https://raw.githubusercontent.com/pacowong/vscode-folderpilot/master/demo.gif)
 
 Open the `stakeholder_update/` folder, run the **Draft Stakeholder Update** skill, and get a polished report in seconds.
 
