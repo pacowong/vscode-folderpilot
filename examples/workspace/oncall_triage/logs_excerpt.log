@@ -1,0 +1,7 @@
+2026-03-07T08:11:42Z api-gateway ERROR upstream timeout service=report-service request_id=0f2e8a
+2026-03-07T08:12:03Z auth-service WARN redis session lookup latency=892ms trace=ab11
+2026-03-07T08:15:10Z report-service ERROR db pool exhausted region=eu-west code=RP5002
+2026-03-07T08:19:24Z api-gateway ERROR 502 response route=/v1/reports/daily request_id=0f2eb4
+2026-03-07T08:23:56Z billing-worker WARN kafka rebalance in progress lag=1460
+2026-03-07T08:27:09Z auth-service ERROR token refresh timeout tenant=enterprise-x
+2026-03-07T08:30:44Z report-service ERROR query timeout sql_id=Q-7719 elapsed=11204ms

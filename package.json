@@ -1,0 +1,108 @@
+{
+  "name": "xolverse-folderpilot",
+  "displayName": "FolderPilot",
+  "description": "Run Copilot-powered folder skills",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.107.0",
+    "node": "22.x"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:folderPilotExplorer",
+    "onCommand:folderPilot.runSkill",
+    "workspaceContains:**/.agent/interactive_skills.yaml"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "folderPilot.runSkill",
+        "title": "Run Skill",
+        "shortTitle": "Run",
+        "category": "FolderPilot",
+        "icon": {
+          "light": "resources/light/run.svg",
+          "dark": "resources/dark/run.svg"
+        }
+      },
+      {
+        "command": "folderPilot.refresh",
+        "title": "Refresh",
+        "category": "FolderPilot"
+      },
+      {
+        "command": "folderPilot.clearCache",
+        "title": "Clear Skill Cache",
+        "shortTitle": "Clear Skill",
+        "category": "FolderPilot",
+        "icon": {
+          "light": "resources/light/clear.svg",
+          "dark": "resources/dark/clear.svg"
+        }
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "folderPilotExplorer",
+          "name": "FolderPilot"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "folderPilot.refresh",
+          "when": "view == folderPilotExplorer",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "folderPilot.runSkill",
+          "when": "view == folderPilotExplorer && viewItem == folderPilot.skill",
+          "group": "inline"
+        },
+        {
+          "command": "folderPilot.runSkill",
+          "when": "view == folderPilotExplorer && viewItem == folderPilot.folder",
+          "group": "inline@1"
+        },
+        {
+          "command": "folderPilot.clearCache",
+          "when": "view == folderPilotExplorer && viewItem == folderPilot.skill",
+          "group": "inline@2"
+        },
+        {
+          "command": "folderPilot.clearCache",
+          "when": "view == folderPilotExplorer && viewItem == folderPilot.skill",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "dependencies": {
+    "yaml": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.109.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "typescript-eslint": "^8.56.1",
+    "eslint": "^9.39.3",
+    "typescript": "^5.9.3",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
