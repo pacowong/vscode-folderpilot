@@ -2,6 +2,9 @@
 
 FolderPilot is a VS Code extension that runs Copilot-powered skills against a folder. Skills live in workspace-level `.agent/interactive_skills/<skill>/SKILL.md` files and are enabled per folder with `.agent/interactive_skills.yaml`. Outputs are written into the folder's `tmp/` directory and opened in VS Code.
 
+![temp_720](https://github.com/user-attachments/assets/58bbe86f-0b22-4d73-bd77-1d9134ad61e5)
+
+
 ## Features
 
 - Explorer view to discover skill-enabled folders.
