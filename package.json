@@ -1,6 +1,7 @@
 {
   "name": "xolverse-folderpilot",
   "displayName": "FolderPilot",
+  "icon": "images/folderpilot_icon.png",
   "description": "Run Copilot-powered folder skills",
   "version": "0.0.2",
   "publisher": "xolverse",
